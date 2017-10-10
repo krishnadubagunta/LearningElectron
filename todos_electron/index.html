@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <ul>
+    </ul>
+    <script type="text/javascript">
+    const { ipcRenderer } = require('electron');
+const list = document.querySelector('ul');
+ipcRenderer.on('todo:add', (event, value) => {
+	const li = document.createElement('li');
+	const text = document.createTextNode(value);
+	li.appendChild(text);
+	list.appendChild(li);
+});
+ipcRenderer.on('todo:clear', () => {
+	list.innerHTML = '';
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+	"name": "basicelectron",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"electron": "electron ."
+	},
+	"author": "Sai Krishna Dubagunta",
+	"license": "ISC",
+	"dependencies": {
+		"electron": "^1.7.8",
+		"fluent-ffmpeg": "^2.1.2"
+	}
+}
